@@ -1,0 +1,15 @@
+{
+  "name": "pacote-with-npm-config",
+  "version": "18.0.0",
+  "description": "Wraps pacote with custom npm config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy Shipman",
+  "license": "ISC",
+  "dependencies": {
+    "@npmcli/config": "^8.3.4",
+    "pacote": "^18.0.6"
+  }
+}
