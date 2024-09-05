@@ -1,6 +1,6 @@
 {
   "name": "pacote-with-npm-config",
-  "version": "18.0.0",
+  "version": "13.0.0",
   "description": "Wraps pacote with custom npm config",
   "main": "index.js",
   "scripts": {
