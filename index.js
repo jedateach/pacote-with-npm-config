@@ -23,15 +23,18 @@ function loadConfigOnce() {
   return confPromise;
 }
 
-// TODO: can we just pull this list from pacote somewhere?
-// TODO: dasherise / camelcase
+// npm configs that overlap with pacote
+// https://docs.npmjs.com/cli/v10/using-npm/config#before
+// https://github.com/npm/pacote?tab=readme-ov-file#options
 let pacoteConfigProps = [
   'cache',
-  // 'umask',
-  // 'preferOffline',
-  // 'preferOnline',
-  // 'before',
+  'umask',
+  'before',
   'registry'
+
+  // TODO: these would need to be converted to kebab case
+  // 'preferOffline', 
+  // 'preferOnline',
 ];
 
 function has(obj, propName) {
@@ -64,7 +67,7 @@ function updatePacoteOptsWithNpmConfig(opts, npmConfig) {
 
 /**
  * Before any call is made, we fetch the npm config
- * and ensure it is injected into the fetchers.
+ * and update the opts arg of the pacote functions.
  */
 function wrapTwoArgs(pacoteMethod) {
   return (spec, opts) => {
