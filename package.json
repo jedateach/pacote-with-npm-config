@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@npmcli/config": "^8.3.4",
-    "pacote": "^18.0.6"
+    "pacote": "^13.0.0"
   }
 }
